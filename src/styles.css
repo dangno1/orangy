@@ -205,6 +205,14 @@ h6 {
   line-height: 2.25rem;
   vertical-align: middle;
 }
+.product-section__price--color {
+  color: #D63A2F;
+}
+.product-section__price--color::after {
+  content: "$999.00";
+  color: #666666;
+  text-decoration: line-through;
+}
 .product-section__small {
   display: flex;
   align-items: center;
@@ -247,6 +255,10 @@ h6 {
 .product-section__item--red {
   top: 1.2rem;
   left: 1.28rem;
+}
+.product-section__title--unique {
+  text-align: center;
+  padding-bottom: 3.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
