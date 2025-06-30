@@ -1,0 +1,24 @@
+{
+  "name": "orangy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass src/scss/main.scss src/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangno1/orangy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dangno1/orangy/issues"
+  },
+  "homepage": "https://github.com/dangno1/orangy#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
