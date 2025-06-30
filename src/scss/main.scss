@@ -241,6 +241,15 @@ h6 {
         vertical-align: middle;
     }
 
+    &__price--color {
+        color: #D63A2F;
+        &::after {
+            content: "$999.00";
+            color: #666666;
+            text-decoration: line-through;
+        }
+    }
+
     &__small {
         display: flex;
         align-items: center;
@@ -290,5 +299,10 @@ h6 {
     &__item--red {
         top: 1.2rem;
         left: 1.28rem;
+    }
+
+    &__title--unique {
+        text-align: center;
+        padding-bottom: 3.2rem;
     }
 }
