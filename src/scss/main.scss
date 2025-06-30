@@ -1,5 +1,44 @@
+$font-heading: 'Lora', serif;
+$font-body: 'Poppins', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+  font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+
+.header {
+    &__top {
+        background-color: #000000;
+        padding: 1.7rem 2rem;
+        color: #FFFFFF;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        letter-spacing: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__bottom {
+        font-weight: 500;
+        font-size: 3.2rem;
+        line-height: 2.4rem;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 1rem 0rem;
+    }
 }
