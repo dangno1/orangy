@@ -1,6 +1,11 @@
 $font-heading: 'Lora', serif;
 $font-body: 'Poppins', sans-serif;
 
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -129,13 +134,13 @@ h6 {
 }
 
 .product-section {
-    padding: 5rem 0;
+    padding: 8rem 0 6.5rem 0;
 
     &__header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 4rem;
+        padding-bottom: 2.4rem;
     }
 
     &__title {
@@ -188,7 +193,7 @@ h6 {
     &__content {
         display: flex;
         gap: 0.7rem;
-        padding-bottom: 1.7rem;
+        padding-bottom: 1.6rem;
     }
 
     &__content--reverse {
@@ -304,6 +309,7 @@ h6 {
 
     &__title--unique {
         text-align: center;
+        padding-top: 1.6rem;
         padding-bottom: 3.2rem;
     }
 }
@@ -352,7 +358,7 @@ h6 {
 }
 
 .banner {
-    padding: 2rem 0 10rem 0;
+    padding: 6.3rem 0 7.8rem 0;
     display: flex;
     gap: 6rem;
 
@@ -404,11 +410,11 @@ h6 {
 }
 
 .block {
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
 
     &__title {
         text-align: center;
-        padding-bottom: 5rem;
+        padding-bottom: 4.5rem;
         line-height: 4rem;
     }
 
@@ -427,7 +433,8 @@ h6 {
         font-size: 1.9rem;
         line-height: 3.8rem;
         vertical-align: middle;
-        padding-top: 0.9rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.1rem;
     }
 
     &__subtitle {
@@ -481,7 +488,7 @@ h6 {
 }
 
 .highlights {
-    padding: 8rem 0;
+    padding: 6.3rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -528,7 +535,7 @@ h6 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        gap: 2rem;
+        gap: 2.4rem;
     }
 
     &__subtitle {
@@ -570,17 +577,28 @@ h6 {
                 background-color: #ffd3a6;
             }
         }
-
-
     }
 
     &__img {
         position: absolute;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            transition: 0.5s;
+            vertical-align: middle;
+
+            &:hover {
+                cursor: pointer;
+                transition: 0.4s;
+                transform: scale(1.1);
+            }
+        }
     }
 
     &__img--1 {
-        top: 4.2rem;
-        left: 22rem;
+        top: 4rem;
+        left: 21.5rem;
 
         img {
             width: 25rem;
@@ -590,7 +608,7 @@ h6 {
 
     &__img--2 {
         left: 16.8rem;
-        top: 23.9rem;
+        top: 23.1rem;
 
         img {
             width: 14.2rem;
@@ -599,7 +617,7 @@ h6 {
     }
 
     &__img--3 {
-        bottom: 5.6rem;
+        bottom: 5.9rem;
         left: 33.4rem;
 
         img {
@@ -609,7 +627,7 @@ h6 {
     }
 
     &__img--4 {
-        top: 6rem;
+        top: 5.5rem;
         right: 17rem;
 
         img {
@@ -619,12 +637,86 @@ h6 {
     }
 
     &__img--5 {
-        top: 32.8rem;
+        top: 32.3rem;
         right: 31.3rem;
 
         img {
             width: 20rem;
             height: 20rem;
+        }
+    }
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 3.5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 4.2rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+        text-align: center;
+        vertical-align: middle;
+        padding-bottom: 1.8rem;
+    }
+
+    &__form {
+        position: relative;
+        width: 24.5%;
+        padding-bottom: 2rem;
+
+        input {
+            width: 100%;
+            padding: 1.2rem 1rem 1.2rem 1rem;
+            border: none;
+        }
+
+        img {
+            position: absolute;
+            top: 20%;
+            right: 1.4rem;
+            opacity: 0.5;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        padding-bottom: 1.5rem;
+
+        a {
+            width: 2rem;
+            height: 2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__copyright {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+        vertical-align: middle;
+
+        a {
+            font-size: 1.3rem;
+            color: #FFFFFF;
         }
     }
 }
