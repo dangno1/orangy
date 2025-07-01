@@ -346,6 +346,36 @@ h6 {
   vertical-align: middle;
 }
 
+.block {
+  padding-bottom: 10rem;
+}
+.block__title {
+  text-align: center;
+  padding-bottom: 5rem;
+  line-height: 4rem;
+}
+.block__content {
+  display: flex;
+  align-items: center;
+  gap: 6.3rem;
+}
+.block__item {
+  width: 100%;
+}
+.block__name {
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 3.8rem;
+  vertical-align: middle;
+  padding-top: 0.9rem;
+}
+.block__subtitle {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
 @keyframes scrollUp {
   0% {
     transform: translateX(100%);
