@@ -111,7 +111,7 @@ h6 {
 }
 
 .product-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 .product-section__header {
   display: flex;
@@ -259,6 +259,45 @@ h6 {
 .product-section__title--unique {
   text-align: center;
   padding-bottom: 3.2rem;
+}
+
+.scrolling {
+  height: 10rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.scrolling__content {
+  gap: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: scrollUp 20s linear infinite;
+  will-change: transform;
+}
+.scrolling h2 {
+  font-weight: 400;
+  font-size: 5.7rem;
+  line-height: 9rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: gray;
+}
+.scrolling img {
+  width: 2.6rem;
+  height: 2.6rem;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.scrolling:before::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=styles.css.map */
