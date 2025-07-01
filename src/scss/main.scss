@@ -351,6 +351,58 @@ h6 {
     }
 }
 
+.banner {
+    padding: 2rem 0 10rem 0;
+    display: flex;
+    gap: 6rem;
+
+    &__item {
+        width: 100%;
+        color: #FFFFFF;
+    }
+
+    &__item--color {
+        background-color: #6E331A;
+        position: relative;
+    }
+
+    &__collection {
+        padding-top: 2.5rem;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 400;
+        font-size: 4.6rem;
+        line-height: 6.3rem;
+        vertical-align: middle;
+        text-transform: uppercase;
+        padding-bottom: 0.9rem;
+    }
+
+    &__suptitle {
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 2rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
 @keyframes scrollUp {
     0% {
         transform: translateX(100%);
