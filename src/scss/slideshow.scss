@@ -4,7 +4,7 @@
     &__image {
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
 
@@ -55,11 +55,39 @@
             background-size: 0% 0.2rem;
             background-repeat: no-repeat;
             transition: background-size 0.3s ease;
+            background-size: 100% 0.2rem;
 
             &:hover {
-                cursor: pointer;
-                background-size: 100% 0.2rem;
+                cursor: pointer; 
             }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .slideshow {
+        &__image {
+            width: 100%;
+            height: 48rem;
+            img {
+                object-fit: cover;
+            }
+        }
+
+        &__title {
+            padding-top: 0rem;
+            font-size: 4.6rem;
+        }
+
+        &__subtitle {
+            padding: 0;
+            letter-spacing: 0.1;
+        }
+
+        &__content {
+            gap: 1.1rem;
+            width: 100%;
         }
     }
 }
