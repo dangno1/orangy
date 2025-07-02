@@ -33,3 +33,28 @@
         vertical-align: middle;
     }
 }
+
+@media (max-width: 500px) {
+    .block {
+        padding-left: 1rem;
+        &__content {
+            gap: 2.3rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding-left: 1rem;
+        }
+
+        &__item {
+            flex: 0 0 70%;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        &__content::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
