@@ -518,7 +518,6 @@ h6 {
     flex: 0 0 70%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    margin-right: 1rem;
   }
   .block__content::-webkit-scrollbar {
     display: none;
@@ -562,6 +561,23 @@ h6 {
   vertical-align: middle;
 }
 
+@media (max-width: 500px) {
+  .banner-v2 {
+    height: 48.9rem;
+  }
+  .banner-v2__content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-v2__title {
+    font-size: 3.7rem;
+    line-height: 1.5;
+    width: 50%;
+  }
+}
 .banner-v2 {
   position: relative;
   overflow: hidden;
@@ -600,6 +616,23 @@ h6 {
   vertical-align: middle;
 }
 
+@media (max-width: 500px) {
+  .banner-v2 {
+    height: 48.9rem;
+  }
+  .banner-v2__content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-v2__title {
+    font-size: 3.7rem;
+    line-height: 1.5;
+    width: 50%;
+  }
+}
 .highlights {
   padding: 6.3rem 0;
   display: flex;
