@@ -50,7 +50,18 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+    .banner {
+        gap: 3rem;
+
+        &__title {
+            font-size: 3.6rem;
+            line-height: 4.3rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
     .banner {
         flex-wrap: wrap;
         gap: 2rem;
@@ -62,10 +73,6 @@
 
         &__content {
             width: 70%;
-        }
-
-        &__title {
-            font-size: 3.6rem;
         }
     }
 }
