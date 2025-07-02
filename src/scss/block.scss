@@ -34,7 +34,15 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+    .block {
+        &__content {
+            gap: 2.3rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
     .block {
         padding-left: 1rem;
         &__content {

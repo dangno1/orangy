@@ -501,7 +501,12 @@ h6 {
   vertical-align: middle;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+  .block__content {
+    gap: 2.3rem;
+  }
+}
+@media (max-width: 768px) {
   .block {
     padding-left: 1rem;
   }
@@ -561,6 +566,11 @@ h6 {
   vertical-align: middle;
 }
 
+@media (max-width: 768px) {
+  .banner-v2__title {
+    line-height: 5.6rem;
+  }
+}
 @media (max-width: 500px) {
   .banner-v2 {
     height: 48.9rem;
@@ -616,6 +626,11 @@ h6 {
   vertical-align: middle;
 }
 
+@media (max-width: 768px) {
+  .banner-v2__title {
+    line-height: 5.6rem;
+  }
+}
 @media (max-width: 500px) {
   .banner-v2 {
     height: 48.9rem;
