@@ -454,6 +454,22 @@ h6 {
   vertical-align: middle;
 }
 
+@media (max-width: 500px) {
+  .banner {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 6.3rem 1rem 7.8rem 1rem;
+  }
+  .banner__item--color {
+    aspect-ratio: 3/4;
+  }
+  .banner__content {
+    width: 70%;
+  }
+  .banner__title {
+    font-size: 3.6rem;
+  }
+}
 .block {
   padding-bottom: 8rem;
 }
