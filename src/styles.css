@@ -663,6 +663,21 @@ h6 {
   vertical-align: middle;
 }
 
+@media (max-width: 500px) {
+  .highlights {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 4.3rem 1rem;
+  }
+  .highlights__img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .highlights__title {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+}
 .banner-v3 {
   background-color: #F6F2EE;
   padding: 10rem 0;

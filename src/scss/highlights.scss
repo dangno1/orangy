@@ -31,3 +31,21 @@
         vertical-align: middle;
     }
 }
+
+@media (max-width: 500px) {
+    .highlights {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 4.3rem 1rem;
+
+        &__img {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        &__title {
+            font-size: 1.6rem;
+            padding: 0;
+        }
+    }
+}
