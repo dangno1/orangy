@@ -17,7 +17,6 @@
 
     &__title {
         padding: 1.5rem 0 0.3rem 0;
-        padding-top: 1.5rem;
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 3.2rem;
@@ -32,9 +31,25 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
+    .highlights {
+        gap: 2rem;
+        padding: 6.3rem 1rem;
+    }
+}
+
+@media (max-width: 640px) {
     .highlights {
         flex-wrap: wrap;
+        &__img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .highlights {
         gap: 1rem;
         padding: 4.3rem 1rem;
 
