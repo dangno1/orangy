@@ -9,11 +9,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <!-- link JS Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
     <header>
-        <div class="header">
+        <div class="header mySwiper">
             <div class="header__top">
                 <div class="header__contact">
                     (+84) 12 34 5678
@@ -22,6 +24,9 @@
                     78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi
                 </div>
             </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
             <h1 class="header__bottom">
                 Orangy
             </h1>
@@ -48,6 +53,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div class="product-section">
@@ -258,6 +264,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="scrolling">
             <div class="scrolling__content">
@@ -275,6 +282,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div class="banner">
@@ -304,6 +312,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div class="block">
@@ -366,6 +375,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="banner-v2">
             <div class="banner-v2__img"></div>
@@ -379,6 +389,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div class="highlights">
@@ -433,6 +444,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="banner-v3">
             <div class="banner-v3__img banner-v3__img--1">
@@ -464,6 +476,7 @@
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="footer">
             <h2 class="footer__title">Subscribe to get 10% OFF</h2>
@@ -484,6 +497,42 @@
         </div>
     </footer>
     <script src="./src/script.js"></script>
+    <!-- Link JS Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const header = document?.querySelector(".header");
+        const headerTop = document?.querySelector(".header__top");
+        const headerAddress = document?.querySelector(".header__address");
+        const headerContact = document?.querySelector(".header__contact");
+
+        function handleResize() {
+            if (window.innerWidth <= 500) {
+                header.classList.add("swiper");
+                headerTop.classList.add("swiper-wrapper");
+                headerAddress.classList.add("swiper-slide");
+                headerContact.classList.add("swiper-slide");
+            } else {
+                header.classList.remove("is-small");
+                headerTop.classList.remove("is-small");
+                headerAddress.classList.remove("is-small");
+                headerContact.classList.remove("swiper-slide");
+            }
+        }
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+.block {
+    padding-bottom: 8rem;
+
+    &__title {
+        text-align: center;
+        padding-bottom: 4.5rem;
+        line-height: 4rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 6.3rem;
+    }
+
+    &__item {
+        width: 100%;
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 1.9rem;
+        line-height: 3.8rem;
+        vertical-align: middle;
+        padding-top: 0.6rem;
+        padding-bottom: 0.1rem;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        vertical-align: middle;
+    }
+}
