@@ -40,6 +40,14 @@
     }
 }
 
+@media (max-width: 768px) {
+    .banner-v2 {
+        &__title {
+            line-height: 5.6rem;
+        }
+    }
+}
+
 @media (max-width: 500px) {
     .banner-v2 {
         height: 48.9rem;
