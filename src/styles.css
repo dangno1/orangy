@@ -43,9 +43,11 @@ h6 {
   letter-spacing: 0;
 }
 .header__contact {
+  background-color: #000000;
   font-size: 1.14rem;
 }
 .header__address {
+  background-color: #000000;
   font-size: 1.08rem;
   letter-spacing: 0.02rem;
 }
@@ -58,7 +60,46 @@ h6 {
   padding: 0.6rem 0rem;
   text-transform: uppercase;
 }
+.header .swiper-button-prev {
+  display: none;
+}
+.header .swiper-button-next {
+  display: none;
+}
 
+@media (max-width: 500px) {
+  .header__top {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .header__contact {
+    padding: 0.5rem 0;
+  }
+  .header__address {
+    padding: 0.5rem 0;
+  }
+  .header__bottom {
+    padding: 0.1rem 0;
+  }
+  .header .swiper-button-prev {
+    display: block;
+    top: 54%;
+    left: 3%;
+    color: white;
+  }
+  .header .swiper-button-next {
+    display: block;
+    top: 54%;
+    right: -3%;
+    color: white;
+  }
+  .header .swiper-button-next::after {
+    font-size: 1rem;
+  }
+  .header .swiper-button-prev::after {
+    font-size: 1rem;
+  }
+}
 .slideshow {
   position: relative;
 }
@@ -306,6 +347,14 @@ h6 {
   z-index: 2;
 }
 
+@keyframes scrollUp {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .banner {
   padding: 6.3rem 0 7.8rem 0;
   display: flex;
@@ -380,6 +429,44 @@ h6 {
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 2rem;
+  vertical-align: middle;
+}
+
+.banner-v2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 27.9rem;
+}
+.banner-v2__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/parallax.png");
+  background-attachment: fixed;
+  z-index: 1;
+}
+.banner-v2__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+.banner-v2__title {
+  font-weight: 400;
+  font-size: 4.7rem;
+  line-height: 9.5rem;
+  vertical-align: middle;
+}
+.banner-v2__subtitle {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
   vertical-align: middle;
 }
 
@@ -620,15 +707,6 @@ h6 {
 .footer__copyright a {
   font-size: 1.3rem;
   color: #FFFFFF;
-}
-
-@keyframes scrollUp {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

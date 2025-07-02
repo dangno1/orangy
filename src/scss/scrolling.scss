@@ -1,0 +1,53 @@
+.scrolling {
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &__content {
+        gap: 3.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        animation: scrollUp 20s linear infinite;
+        will-change: transform;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 5.7rem;
+        line-height: 9rem;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: gray;
+    }
+
+    img {
+        width: 2.6rem;
+        height: 2.6rem;
+        filter: grayscale(1);
+        opacity: 0.5;
+    }
+
+    &:before::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2rem;
+        z-index: 2;
+    }
+}
+
+
+@keyframes scrollUp {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
