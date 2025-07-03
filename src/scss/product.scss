@@ -179,13 +179,36 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .product-section {
-        padding: 4.7rem 0.5rem 2.5rem 0.5rem;
+        padding: 4.7rem 1rem 2.5rem 1rem;
 
         &__header {
             flex-wrap: wrap;
             justify-content: center;
+            gap: 2rem;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .product-section {
+        &__name {
+            min-height: 5.176rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .product-section {
+
+        &__header {
+            flex-direction: column;
+            gap: 0rem;
+        }
+
+        &__name {
+            min-height: auto;
         }
 
         &__tabs {
