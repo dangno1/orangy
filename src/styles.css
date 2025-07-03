@@ -376,6 +376,11 @@ h6 {
     padding-top: 0;
   }
 }
+@media (max-width: 380px) {
+  .product-section__name {
+    min-height: 5.176rem;
+  }
+}
 .scrolling {
   height: 10rem;
   overflow: hidden;
@@ -834,6 +839,136 @@ h6 {
   height: 20rem;
 }
 
+@media (max-width: 1200px) {
+  .banner-v3__img--1 {
+    top: 4rem;
+    left: 7.5rem;
+  }
+  .banner-v3__img--1 img {
+    width: 25rem;
+    height: 25rem;
+  }
+  .banner-v3__img--2 {
+    left: 2.8rem;
+    top: 23.1rem;
+  }
+  .banner-v3__img--2 img {
+    width: 14.2rem;
+    height: 14.2rem;
+  }
+  .banner-v3__img--3 {
+    bottom: 5.9rem;
+    left: 18.4rem;
+  }
+  .banner-v3__img--3 img {
+    width: 17.7rem;
+    height: 17.7rem;
+  }
+  .banner-v3__img--4 {
+    top: 5.5rem;
+    right: 4rem;
+  }
+  .banner-v3__img--4 img {
+    width: 26.5rem;
+    height: 26.3rem;
+  }
+  .banner-v3__img--5 {
+    top: 32.3rem;
+    right: 16rem;
+  }
+  .banner-v3__img--5 img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 960px) {
+  .banner-v3__subtitle {
+    padding-top: 4rem;
+    width: 100%;
+  }
+  .banner-v3__img img {
+    width: 17rem;
+    height: 17rem;
+  }
+  .banner-v3__img--1 {
+    top: 3rem;
+    left: 15.5rem;
+  }
+  .banner-v3__img--2 {
+    left: 4.8rem;
+    top: 12.1rem;
+  }
+  .banner-v3__img--3 {
+    top: 10.5rem;
+    left: unset;
+    right: 5rem;
+    bottom: unset;
+  }
+  .banner-v3__img--4 {
+    top: 39.5rem;
+    left: 7rem;
+  }
+  .banner-v3__img--5 {
+    top: 37rem;
+    right: 7rem;
+  }
+}
+@media (max-width: 768px) {
+  .banner-v3 {
+    height: 64.2rem;
+  }
+  .banner-v3__img img {
+    width: 13rem;
+    height: 13rem;
+  }
+  .banner-v3__content {
+    width: 100%;
+  }
+  .banner-v3__subtitle {
+    width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .banner-v3__img img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media (max-width: 500px) {
+  .banner-v3 {
+    height: 55.2rem;
+  }
+  .banner-v3__subtitle {
+    padding-top: 5.3rem;
+  }
+  .banner-v3__title {
+    width: 70%;
+  }
+  .banner-v3__img img {
+    width: 8.8rem;
+    height: 8.8rem;
+  }
+  .banner-v3__img--1 {
+    top: 2.5rem;
+    left: 9.8rem;
+  }
+  .banner-v3__img--2 {
+    left: 1.8rem;
+    top: 7.5rem;
+  }
+  .banner-v3__img--3 {
+    top: 8.5rem;
+    right: 2rem;
+  }
+  .banner-v3__img--4 {
+    top: 44rem;
+    left: 4rem;
+  }
+  .banner-v3__img--5 {
+    top: 43rem;
+    right: 4rem;
+  }
+}
 .footer {
   background-color: #000000;
   color: white;

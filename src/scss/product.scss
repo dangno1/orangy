@@ -243,3 +243,11 @@
         }
     }
 }
+
+@media (max-width: 380px) {
+    .product-section {
+        &__name {
+            min-height: 5.176rem;
+        }
+    }
+}
