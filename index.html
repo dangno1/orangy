@@ -47,7 +47,7 @@
                     Clever products for every corner
                 </div>
                 <div class="slideshow__button">
-                    <button>
+                    <button onclick="onclickExplore()">
                         explore now
                     </button>
                 </div>
@@ -385,6 +385,7 @@
 
     <section>
         <div class="banner-v2">
+            <div class="banner-v2__overlay"></div>
             <div class="banner-v2__img"></div>
             <div class="banner-v2__content">
                 <h2 class="banner-v2__title">
@@ -503,70 +504,9 @@
             <p class="footer__copyright">© 2024 <a href="#">orangy</a></p>
         </div>
     </footer>
-    <script src="./src/script.js"></script>
     <!-- Link JS Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const header = document?.querySelector(".header");
-        const headerTop = document?.querySelector(".header__top");
-        const headerAddress = document?.querySelector(".header__address");
-        const headerContact = document?.querySelector(".header__contact");
-
-        const uniqueContent = document?.querySelector(".product-section__unique--content");
-        const smallUnique = document?.querySelector(".product-section__small--unique");
-        const itemProduct1 = document?.querySelector(".product-section__right--1");
-        const itemProduct2 = document?.querySelector(".product-section__right--2");
-        const itemProduct3 = document?.querySelector(".product-section__right--3");
-        const itemProduct4 = document?.querySelector(".product-section__right--4");
-
-        function handleResize() {
-            if (window.innerWidth <= 500) {
-                header.classList.add("swiper");
-                headerTop.classList.add("swiper-wrapper");
-                headerAddress.classList.add("swiper-slide");
-                headerContact.classList.add("swiper-slide");
-
-                uniqueContent.classList.add("swiper");
-                smallUnique.classList.add("swiper-wrapper");
-                itemProduct1.classList.add("swiper-slide");
-                itemProduct2.classList.add("swiper-slide");
-                itemProduct3.classList.add("swiper-slide");
-                itemProduct4.classList.add("swiper-slide");
-            } else {
-                header.classList.remove("is-small");
-                headerTop.classList.remove("is-small");
-                headerAddress.classList.remove("is-small");
-                headerContact.classList.remove("swiper-slide");
-
-                uniqueContent.classList.remove("swiper");
-                smallUnique.classList.remove("swiper-wrapper");
-                itemProduct1.classList.remove("swiper-slide");
-                itemProduct2.classList.remove("swiper-slide");
-                itemProduct3.classList.remove("swiper-slide");
-                itemProduct4.classList.remove("swiper-slide");
-            }
-        }
-
-        handleResize();
-
-        window.addEventListener("resize", handleResize);
-
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-
-        var swiper1 = new Swiper(".mySwiper1", {
-            slidesPerView: 1.5,
-            centeredSlides: false,
-            loop: true,
-            grabCursor: true,
-        });
-
-    </script>
+    <script src="./src/script.js"></script>
 </body>
 
 </html>

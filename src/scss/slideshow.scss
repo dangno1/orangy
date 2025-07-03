@@ -55,10 +55,12 @@
             background-size: 0% 0.2rem;
             background-repeat: no-repeat;
             transition: background-size 0.3s ease;
-            background-size: 100% 0.2rem;
+            // background-size: 100% 0.2rem;
 
             &:hover {
-                cursor: pointer; 
+                cursor: pointer;
+                transition: background-size 0.3s ease;
+                background-size: 100% 0.2rem;
             }
         }
     }
@@ -70,6 +72,7 @@
         &__image {
             width: 100%;
             height: 48rem;
+
             img {
                 object-fit: cover;
             }
