@@ -16,10 +16,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-family: $font-body;
-}
-
 h1,
 h2,
 h3,
@@ -45,3 +41,4 @@ h6 {
 @import './highlights.scss';
 @import './banner-v3.scss';
 @import './footer.scss';
+@import './popup.scss';
