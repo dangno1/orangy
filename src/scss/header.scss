@@ -1,8 +1,8 @@
 .header {
     &__top {
-        background-color: #000000;
+        background-color: var(--color-black);
         padding: 0.1rem 1.03rem 0.1rem 0.8rem;
-        color: #FFFFFF;
+        color: var(--color-white);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -12,12 +12,12 @@
     }
 
     &__contact {
-        background-color: #000000;
+        background-color: var(--color-black);
         font-size: 1.14rem;
     }
 
     &__address {
-        background-color: #000000;
+        background-color: var(--color-black);
         font-size: 1.08rem;
         letter-spacing: 0.02rem;
     }
@@ -64,14 +64,14 @@
             display: block;
             top: 54%;
             left: 3%;
-            color: white;
+            color: var(--color-white);
         }
 
         .swiper-button-next {
             display: block;
             top: 54%;
             right: -3%;
-            color: white;
+            color: var(--color-white);
         }
 
         .swiper-button-next::after {

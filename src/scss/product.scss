@@ -30,7 +30,7 @@
             line-height: 2.4rem;
             letter-spacing: 0;
             vertical-align: middle;
-            color: #000000;
+            color: var(--color-black);
 
             background-image: linear-gradient(currentColor, currentColor);
             background-position: 0 100%;
@@ -94,7 +94,7 @@
         line-height: 2.2rem;
         vertical-align: middle;
         text-transform: uppercase;
-        color: #00000099;
+        color: var(--color-light-gray);
     }
 
     &__name {
@@ -112,11 +112,11 @@
     }
 
     &__price--color {
-        color: #D63A2F;
+        color: var(--color-red);
 
         &::after {
             content: "$999.00";
-            color: #666666;
+            color: var(--color-lightest-gray);
             text-decoration: line-through;
         }
     }
@@ -132,13 +132,13 @@
         font-size: 1.15rem;
         line-height: 1.8rem;
         vertical-align: middle;
-        color: #FFFFFF;
-        background-color: #000000;
+        color: var(--color-white);
+        background-color: var(--color-black);
         padding: 0.1rem 0.7rem;
     }
 
     &__sale--discount {
-        background-color: #A42003;
+        background-color: var(--color-dark-red);
         padding: 0.7rem 0.7rem;
         font-size: 1rem;
     }
@@ -149,10 +149,9 @@
         font-size: 1.15rem;
         line-height: 1.8rem;
         vertical-align: middle;
-        color: #ffffff;
-        background-color: #054E4A;
+        color: var(--color-white);
+        background-color: var(--color-dark-green);
         padding: 0.1rem 0.7rem;
-
     }
 
     &__left {
@@ -179,6 +178,7 @@
     }
 }
 
+// Media Queries
 @media (max-width: 768px) {
     .product-section {
         padding: 4.7rem 1rem 2.5rem 1rem;
@@ -217,7 +217,6 @@
             li:last-child {
                 display: none;
             }
-
         }
 
         &__title {
