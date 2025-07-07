@@ -85,7 +85,44 @@ handleResize();
 
 window.addEventListener("resize", handleResize);
 
-function onclickExplore () {
+function onclickExplore() {
     const product = document.querySelector(".product-section");
     product.scrollIntoView({ behavior: "smooth" });
 }
+
+
+function closePopup() {
+    const popupWrapper = document.querySelector(".page-section-popup");
+
+    popupWrapper.classList.add("page-section-popup__out");
+
+    setTimeout(() => {
+        popupWrapper.style.display = "none";
+    }, 500);
+}
+
+window.addEventListener("load", () => {
+    const popupWrapper = document.querySelector(".page-section-popup");
+    const popup = popupWrapper.querySelector(".popup");
+
+    let hasInteracted = false;
+
+    const showPopup = () => {
+        if (hasInteracted) return;
+        hasInteracted = true;
+
+        setTimeout(() => {
+            popupWrapper.style.display = "flex";
+            popupWrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            popup.classList.add("show");
+        }, 3000);
+
+        window.removeEventListener("mousemove", showPopup);
+        window.removeEventListener("touchmove", showPopup);
+    };
+
+    window.addEventListener("mousemove", showPopup);
+    window.addEventListener("touchmove", showPopup);
+});
+
+
