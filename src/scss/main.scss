@@ -1,6 +1,23 @@
 $font-heading: 'Lora', serif;
 $font-body: 'Poppins', sans-serif;
 
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: gray;
+    --color-light-gray: rgba(0, 0, 0, 0.6);
+    --color-lightest-gray: #666666;
+    --color-red: #D63A2F;
+    --color-dark-red: #A42003;
+    --color-dark-green: #054E4A;
+    --color-yellow: rgb(252, 188, 14);
+    --color-yellow-hover: rgb(225, 165, 0);
+    --color-banner-bg: #6E331A;
+    --color-banner-v3-bg: #F6F2EE;
+    --color-banner-v3-btn-border: rgb(190, 190, 190);
+    --color-banner-v3-btn-hover: #ffd3a6;
+}
+
 textarea:focus,
 input:focus {
     outline: none;
@@ -14,6 +31,10 @@ input:focus {
 
 html {
     font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 h1,

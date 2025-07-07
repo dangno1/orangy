@@ -5,11 +5,11 @@
 
     &__item {
         width: 100%;
-        color: #FFFFFF;
+        color: var(--color-white);
     }
 
     &__item--color {
-        background-color: #6E331A;
+        background-color: var(--color-banner-bg);
         position: relative;
     }
 

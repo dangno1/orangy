@@ -1,3 +1,20 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: gray;
+  --color-light-gray: rgba(0, 0, 0, 0.6);
+  --color-lightest-gray: #666666;
+  --color-red: #D63A2F;
+  --color-dark-red: #A42003;
+  --color-dark-green: #054E4A;
+  --color-yellow: rgb(252, 188, 14);
+  --color-yellow-hover: rgb(225, 165, 0);
+  --color-banner-bg: #6E331A;
+  --color-banner-v3-bg: #F6F2EE;
+  --color-banner-v3-btn-border: rgb(190, 190, 190);
+  --color-banner-v3-btn-hover: #ffd3a6;
+}
+
 textarea:focus,
 input:focus {
   outline: none;
@@ -13,11 +30,9 @@ html {
   font-size: 62.5%;
 }
 
-
 body {
   font-family: "Poppins", sans-serif;
 }
-
 
 h1,
 h2,
@@ -34,9 +49,9 @@ h6 {
 }
 
 .header__top {
-  background-color: #000000;
+  background-color: var(--color-black);
   padding: 0.1rem 1.03rem 0.1rem 0.8rem;
-  color: #FFFFFF;
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,11 +60,11 @@ h6 {
   letter-spacing: 0;
 }
 .header__contact {
-  background-color: #000000;
+  background-color: var(--color-black);
   font-size: 1.14rem;
 }
 .header__address {
-  background-color: #000000;
+  background-color: var(--color-black);
   font-size: 1.08rem;
   letter-spacing: 0.02rem;
 }
@@ -87,13 +102,13 @@ h6 {
     display: block;
     top: 54%;
     left: 3%;
-    color: white;
+    color: var(--color-white);
   }
   .header .swiper-button-next {
     display: block;
     top: 54%;
     right: -3%;
-    color: white;
+    color: var(--color-white);
   }
   .header .swiper-button-next::after {
     font-size: 1rem;
@@ -118,7 +133,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: #ffffff;
+  color: var(--color-white);
   gap: 1.2rem;
 }
 .slideshow__title {
@@ -141,7 +156,7 @@ h6 {
   padding: 0.2rem 0;
   text-transform: uppercase;
   background: none;
-  color: #FFFFFF;
+  color: var(--color-white);
   border: none;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -210,7 +225,7 @@ h6 {
   line-height: 2.4rem;
   letter-spacing: 0;
   vertical-align: middle;
-  color: #000000;
+  color: var(--color-black);
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
   background-size: 0% 0.1rem;
@@ -261,7 +276,7 @@ h6 {
   line-height: 2.2rem;
   vertical-align: middle;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--color-light-gray);
 }
 .product-section__name {
   font-weight: 500;
@@ -276,11 +291,11 @@ h6 {
   vertical-align: middle;
 }
 .product-section__price--color {
-  color: #D63A2F;
+  color: var(--color-red);
 }
 .product-section__price--color::after {
   content: "$999.00";
-  color: #666666;
+  color: var(--color-lightest-gray);
   text-decoration: line-through;
 }
 .product-section__small {
@@ -293,12 +308,12 @@ h6 {
   font-size: 1.15rem;
   line-height: 1.8rem;
   vertical-align: middle;
-  color: #FFFFFF;
-  background-color: #000000;
+  color: var(--color-white);
+  background-color: var(--color-black);
   padding: 0.1rem 0.7rem;
 }
 .product-section__sale--discount {
-  background-color: #A42003;
+  background-color: var(--color-dark-red);
   padding: 0.7rem 0.7rem;
   font-size: 1rem;
 }
@@ -308,8 +323,8 @@ h6 {
   font-size: 1.15rem;
   line-height: 1.8rem;
   vertical-align: middle;
-  color: #ffffff;
-  background-color: #054E4A;
+  color: var(--color-white);
+  background-color: var(--color-dark-green);
   padding: 0.1rem 0.7rem;
 }
 .product-section__left {
@@ -406,7 +421,7 @@ h6 {
   line-height: 9rem;
   letter-spacing: 0%;
   vertical-align: middle;
-  color: gray;
+  color: var(--color-gray);
 }
 .scrolling img {
   width: 2.6rem;
@@ -438,10 +453,10 @@ h6 {
 }
 .banner__item {
   width: 100%;
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 .banner__item--color {
-  background-color: #6E331A;
+  background-color: var(--color-banner-bg);
   position: relative;
 }
 .banner__collection {
@@ -587,7 +602,7 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--color-white);
   text-align: center;
   z-index: 2;
 }
@@ -656,7 +671,7 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--color-white);
   text-align: center;
   z-index: 2;
 }
@@ -754,7 +769,7 @@ h6 {
   }
 }
 .banner-v3 {
-  background-color: #F6F2EE;
+  background-color: var(--color-banner-v3-bg);
   padding: 10rem 0;
   height: 60.2rem;
   position: relative;
@@ -797,13 +812,13 @@ h6 {
 .banner-v3__button button {
   background: none;
   padding: 0.9rem 3rem;
-  border: 0.1rem solid rgb(190, 190, 190);
+  border: 0.1rem solid var(--color-banner-v3-btn-border);
   transition: 0.3s;
 }
 .banner-v3__button button:hover {
   cursor: pointer;
   transition: 0.3s;
-  background-color: #ffd3a6;
+  background-color: var(--color-banner-v3-btn-hover);
 }
 .banner-v3__img {
   position: absolute;
@@ -991,8 +1006,8 @@ h6 {
   }
 }
 .footer {
-  background-color: #000000;
-  color: white;
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: 3.5rem 0 1rem 0;
   display: flex;
   flex-direction: column;
@@ -1116,7 +1131,7 @@ h6 {
   align-items: center;
   gap: 2rem;
   padding: 6rem 0 2rem 0;
-  color: white;
+  color: var(--color-white);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1147,14 +1162,14 @@ h6 {
   width: 100%;
   padding: 1rem;
   border-radius: 3rem;
-  color: white;
+  color: var(--color-white);
   font-size: 1.5rem;
-  background-color: rgb(252, 188, 14);
+  background-color: var(--color-yellow);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .popup__button button:hover {
-  background-color: rgb(225, 165, 0);
+  background-color: var(--color-yellow-hover);
 }
 
 .popup__close {
@@ -1167,7 +1182,7 @@ h6 {
   position: absolute;
   top: 2%;
   right: 1%;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 100%;
   width: 2rem;
   height: 2rem;
