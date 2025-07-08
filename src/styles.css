@@ -1299,6 +1299,82 @@ h6 {
     font-size: 3.5rem;
   }
 }
+.contact {
+  background-color: var(--color-contact);
+}
+.contact__title {
+  text-align: center;
+  padding: 3rem 0;
+}
+.contact__form {
+  width: 100%;
+}
+.contact__row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 1rem;
+}
+.contact__row--submit {
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.contact__group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.contact__group input {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+}
+.contact__group textarea {
+  border: none;
+  padding: 1rem;
+}
+.contact__group label {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+.contact__group label:last-child {
+  color: var(--color-red);
+}
+.contact__submit {
+  padding: 0.4rem 5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  letter-spacing: 8%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  transition: 0.3s;
+}
+.contact__submit:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--color-blact);
+  background-color: var(--color-white);
+}
+.contact__note {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+.contact__errCaptcha {
+  color: var(--color-red);
+  font-size: 1.3rem;
+}
+
 .popup-contact {
   position: fixed;
   inset: 0;
