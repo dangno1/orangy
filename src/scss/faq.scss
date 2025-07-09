@@ -38,7 +38,6 @@
 }
 
 .answer {
-    // padding: 1.5rem 5.5rem 2rem 2.5rem;
     display: none;
 }
 
@@ -60,26 +59,24 @@
     font-size: 1.3rem;
 }
 
-@media (max-width: 375px) {
-    .page-section {
-        padding: 2rem 0;
+@media (max-width: 768px) {
+    .question {
+        padding: 0 1rem;
     }
 
+    .answer {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 375px) {
     .faq__title {
         font-size: 2rem;
         padding: 1rem;
     }
 
-    .answer {
-        padding: 1.5rem 2rem 2rem 2.5rem;
-    }
-
     .answer__title {
         font-size: 1.6rem;
-    }
-
-    .question {
-        padding: 1.5rem;
     }
 
     .question__title {

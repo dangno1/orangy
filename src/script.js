@@ -103,41 +103,8 @@ function closePopup() {
         popupWrapper.style.display = "none";
     }, 500);
 
-    localStorage.setItem("popupLastShown", Date.now());
+    // localStorage.setItem("popupLastShown", Date.now());
 }
-
-window.addEventListener("load", () => {
-    const popupWrapper = document.querySelector(".page-section-popup");
-    const popup = popupWrapper.querySelector(".popup");
-
-    let hasInteracted = false;
-
-    const lastShown = localStorage.getItem("popupLastShown");
-    const fourHours = 1 * 60 * 60 * 1000;
-
-    if (lastShown && Date.now() - parseInt(lastShown) < fourHours) {
-        return;
-    }
-
-    const showPopup = () => {
-        if (hasInteracted) return;
-        hasInteracted = true;
-
-        setTimeout(() => {
-            popupWrapper.style.display = "flex";
-            popupWrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-            popup.classList.add("show");
-
-            localStorage.setItem("popupLastShown", Date.now());
-        }, 3000);
-
-        window.removeEventListener("mousemove", showPopup);
-        window.removeEventListener("touchmove", showPopup);
-    };
-
-    window.addEventListener("mousemove", showPopup);
-    window.addEventListener("touchmove", showPopup);
-});
 // --------------------------------------------------------------
 
 // FAQ ----------------------------------------------------------------
@@ -183,7 +150,7 @@ AOS.init({
 
 // emial footer --------------------------------------------------------
 function sendEmail() {
-    const email = document.querySelector("#email").value;
+    const email = document.querySelector("#email__footer").value;
     if (email.length == 0) {
         document.querySelector(".popup-contact__text--2").style.display = "block";
         showPopupContact();
@@ -206,45 +173,18 @@ function sendEmail() {
             body: `email=${encodeURIComponent(email)}`
         }).then(() => {
             document.querySelector(".popup-contact__text--1").style.display = "block";
+            document.querySelector(".popup-contact__text--2").style.display = "none";
             showPopupContact();
             document.getElementById("email").value = "";
         });
 
-        // // tao cookie, max-age la thoi gan cookie ton tai
-        // document.cookie = "email=" + email + "; path=/; max-age=14400";
-        // closePopup();
-
     } else {
+        document.querySelector(".popup-contact__text--1").style.display = "none";
         document.querySelector(".popup-contact__text--2").style.display = "block";
         showPopupContact();
         return 0;
     }
 }
-
-// ham lay gia tri cookie
-function getCookie(email) {
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(";");
-    // console.log("Day la decodedCookie = " + decodedCookie);
-    // console.log("Day la chuoi sau dau ; = " + ca);
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i].trim();
-        if (c.indexOf(email + "=") == 0) {
-            return c.substring(email.length + 1, c.length);
-        }
-    }
-    return "";
-}
-
-//ham hien thi email neu cos cookie
-function showEmial() {
-    const email = getCookie("email");
-    if (email != "") {
-        console.log("Email: " + email);
-    }
-}
-
-showEmial();
 // ---------------------------------------------------------------------
 
 
@@ -252,7 +192,7 @@ showEmial();
 function closePopupContact() {
     const popupConatct = document.querySelector(".popup-contact");
 
-    popupConatct.classList.add("popup-contact__out");
+    popupConatct.classList.add("popup-contact--out");
 
     setTimeout(() => {
         popupConatct.style.display = "none";
@@ -363,5 +303,61 @@ function submitForm() {
 const savedData = localStorage.getItem("data");
 console.log("Data from localStorage:", JSON.parse(savedData));
 // ---------------------------------------------------------------------
+
+// cookibar ------------------------------------------------------------
+function hidenCookibar() {
+    document.querySelector(".cookibar").style.display = "none";
+}
+
+function cookibar() {
+    const maxAge = 15552000;
+    document.cookie = `cookieAccepted=true; path=/; max-age=${maxAge}`;
+    console.log(document.cookie);
+    hidenCookibar();
+}
+
+// load lai page 
+window.addEventListener("load", () => {
+
+    // accep cookie
+    const accepted = document.cookie.includes("cookieAccepted=true");
+    if (accepted) {
+        hidenCookibar();
+    }
+
+    // console.log(document.cookie);
+
+    //popup reload page
+    const popupWrapper = document.querySelector(".page-section-popup");
+    const popup = popupWrapper.querySelector(".popup");
+
+    let hasInteracted = false;
+
+    const lastShown = localStorage.getItem("popupLastShown");
+    const fourHours = 240 * 60 * 1000;
+
+    if (lastShown && Date.now() - parseInt(lastShown) < fourHours) {
+        return;
+    }
+
+    const showPopup = () => {
+        if (hasInteracted) return;
+        hasInteracted = true;
+
+        setTimeout(() => {
+            popupWrapper.style.display = "flex";
+            popupWrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            popup.classList.add("show");
+
+            localStorage.setItem("popupLastShown", Date.now());
+        }, 3000);
+
+        window.removeEventListener("mousemove", showPopup);
+        window.removeEventListener("touchmove", showPopup);
+    };
+
+    window.addEventListener("mousemove", showPopup);
+    window.addEventListener("touchmove", showPopup);
+});
 
 
