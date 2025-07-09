@@ -112,7 +112,6 @@ const list = document.querySelectorAll(".list");
 
 list.forEach((item) => {
     const answer = item.querySelector(".answer");
-    const question = item.querySelector(".question");
     const icon = item.querySelector(".question__icon");
 
     icon.addEventListener("click", function () {
@@ -128,8 +127,6 @@ list.forEach((item) => {
         })
 
         answer.classList.toggle("answer__show");
-        question.classList.toggle("question__color");
-        icon.classList.toggle("question__icon--color");
 
         if (answer.classList.contains("answer__show")) {
             icon.textContent = "-";
