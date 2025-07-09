@@ -1,0 +1,51 @@
+.cookibar {
+    background-color: rgb(242, 242, 242, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    &__text {
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &__action {
+        display: flex;
+        gap: 1rem;
+
+        button {
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 2.4rem;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            padding: 0rem 1rem;
+            border: none;
+        }
+    }
+
+    &__accept {
+        background-color: var(--color-black);
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    &__ignore {
+        background: none;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: var(--color-black);
+            color: var(--color-white);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
+}
