@@ -114,7 +114,9 @@ list.forEach((item) => {
     const answer = item.querySelector(".answer");
     const icon = item.querySelector(".question__icon");
 
-    icon.addEventListener("click", function () {
+    const question = item.querySelector(".question");
+
+    question.addEventListener("click", function () {
 
         list.forEach((itemOpen) => {
             if (itemOpen !== item) {
@@ -189,7 +191,7 @@ function sendEmail() {
 function closePopupContact() {
     const popupConatct = document.querySelector(".popup-contact");
 
-    popupConatct.classList.add("popup-contact--out");
+    popupConatct.classList.add("popup-contact__out");
 
     setTimeout(() => {
         popupConatct.style.display = "none";
@@ -265,14 +267,10 @@ function submitForm() {
         phone: phone,
         address: address,
         message: message,
-        // price: 100,
-        // img: "asadas.jpg",
-        // cate: 1,
-        // desc: message,
         recaptcha: recaptchaToken
     }
 
-    fetch('https://testapi.demo.wgentech.com/notify.php',
+    fetch('http://localhost:8088/api/newContact',
         {
             method: 'POST',
             keepalive: true,
@@ -296,9 +294,6 @@ function submitForm() {
         });
 
 }
-
-const savedData = localStorage.getItem("data");
-console.log("Data from localStorage:", JSON.parse(savedData));
 // ---------------------------------------------------------------------
 
 // cookibar ------------------------------------------------------------
@@ -322,7 +317,16 @@ window.addEventListener("load", () => {
         hidenCookibar();
     }
 
-    // console.log(document.cookie);
+    // value input 
+    const savedData = localStorage.getItem("data");
+    if (savedData) {
+        const data = JSON.parse(savedData);
+        document.getElementById("name").value = data.contact.name;
+        document.getElementById("email").value = data.contact.email;
+        document.getElementById("phone").value = data.contact.phone;
+        document.getElementById("address").value = data.contact.address;
+        // document.getElementById("message").value = data.contact.message;
+    }
 
     //popup reload page
     const popupWrapper = document.querySelector(".page-section-popup");
@@ -334,6 +338,8 @@ window.addEventListener("load", () => {
     const fourHours = 240 * 60 * 1000;
 
     if (lastShown && Date.now() - parseInt(lastShown) < fourHours) {
+        popupWrapper.classList.add("page-section-popup__out");
+        console.log(Date.now() - parseInt(lastShown), "-" ,fourHours);
         return;
     }
 
