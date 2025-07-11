@@ -1491,4 +1491,11 @@ h6 {
   transition: 0.3s;
 }
 
+@media (max-width: 500px) {
+  .cookibar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
